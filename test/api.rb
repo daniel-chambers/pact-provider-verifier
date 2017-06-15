@@ -18,6 +18,10 @@ get '/fail' do
   json :greeting => 'Oh noes!'
 end
 
+get '/query' do
+  json :greeting => "Query: #{request.env['rack.request.query_string']}"
+end
+
 post '/provider-state' do
 
   if get_provider_state(request) == "There is a greeting"

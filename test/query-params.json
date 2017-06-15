@@ -1,0 +1,32 @@
+{
+  "consumer": {
+    "name": "me"
+  },
+  "provider": {
+    "name": "they"
+  },
+  "interactions": [
+    {
+      "description": "Greeting",
+      "request": {
+        "method": "GET",
+        "path": "/query",
+        "query": {
+            "such": "wow",
+            "test": ["a","b"]
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "greeting": "Query: such=wow&test=a&test=b"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "2.0.0"
+  }
+}
